@@ -1,0 +1,140 @@
+/*
+* CSS for plain theme author box
+* @since 2.4
+* @author Sourov Amin
+*/
+ .um-ab-style-box-plain {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 1px solid #eee;
+    width: 100%;
+    clear: both;
+    display: block;
+    overflow: hidden;
+    word-wrap: break-word;
+    position: relative;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 5px 5px;
+ }
+ 
+ .um-ab-style-box-plain .um-ab-body{
+    min-height: 140px;
+ }
+ 
+ .um-ab-style-box-plain .um-ab-avatar {
+    float: left;
+    margin: 10px 20px 10px 20px;
+}
+    
+.um-ab-style-box-plain .um-ab-avatar img{
+    max-width: 110px;
+    height: auto;
+}
+
+.um-ab-style-box-plain .um-ab-name {
+    font-size: 21px;
+    line-height: 1;
+    margin: 20px 0 0 20px;
+    display: block;
+}
+
+.um-ab-style-box-plain .um-ab-designation {
+    line-height: 1;
+    font-style: italic;
+    display: block;
+    font-size: 12px;
+}
+
+.um-ab-style-box-plain .um-ab-description {
+    display: block;
+    margin: 10px 0 10px 0;
+}
+
+.um-ab-style-box-plain .um-ab-portfolio-post {
+    display: block;
+    margin: 5px 0 5px 0;
+}
+
+.um-ab-style-box-plain .um-ab-portfolio-post {
+    display:flex;
+    justify-content:center;
+}
+
+.um-ab-style-box-plain .um-ab-footer {
+    position: relative;
+    display: block;
+    background: #fcfcfc;
+    padding: 5px;
+    border-top: 2px solid #eee;
+}
+
+.um-ab-style-box-plain .um-ab-social-icon {
+    margin: 0 5px 0 5px;
+    font-size: 10px;
+}
+
+.um-ab-style-box-plain .um-ab-email {
+    margin: 0 5px 0 5px;
+}
+
+.um-ab-style-box-plain .um-ab-number {
+    margin: 0 5px 0 5px;
+    white-space: nowrap;
+}
+
+
+/*  - For smaller/mobile screen
+-------------------------------------------------------------- */
+@media screen and (max-width: 480px) {
+
+  .um-ab-style-box-plain {
+    text-align: center;
+  }
+ 
+  .um-ab-style-box-plain .um-ab-avatar {
+    float: none;
+    padding: 20px 0;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+  }
+ 
+  .um-ab-style-box-plain .um-ab-avatar img {
+    float: none;
+    display: inline-block;
+    display: -moz-inline-stack;
+    vertical-align: middle;
+    zoom: 1;
+  }
+ 
+  .um-ab-style-box-plain .um-ab-description {
+    margin: 0 10px 20px;
+    text-align: center;
+  }
+ 
+  .um-ab-style-box-plain .um-ab-name {
+    text-align: center;
+    margin: 5px 0 5px 0;
+  }
+  
+  .um-ab-style-box-plain .um-ab-designation{
+    margin-bottom: 10px;
+  }
+  
+  .um-ab-style-box-plain .um-ab-socialLink{
+    display: block;
+  }
+  
+  .um-ab-style-box-plain .um-ab-email{
+    display: block;
+  }
+  
+  .um-ab-style-box-plain .um-ab-number{
+    display: block;
+  }
+    
+}
+ 

@@ -1,0 +1,1 @@
+<p>Data from another view</p>

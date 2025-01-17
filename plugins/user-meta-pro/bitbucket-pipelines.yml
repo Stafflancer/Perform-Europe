@@ -1,0 +1,33 @@
+# Run PHP test for WordPress
+
+# Defaul image
+#image: composer:2.0 # composer:2.0 has PHP-8.0 which is not compatible with WP tests
+
+pipelines:
+  default:
+    - parallel:
+        - step:
+            name: Integration Test
+            image: tfirdaus/wp-docklines:php7.2-fpm-alpine # 7.4 is not working
+            script:
+              - wget -O phpunit https://phar.phpunit.de/phpunit-7.phar && chmod +x phpunit # WP supports until phpunit-7
+              - bash tests/install-wp-tests.sh wordpress_db wordpress_user password 127.0.0.1 latest true
+              - composer install
+              - ./phpunit
+              - WP_MULTISITE=1 ./phpunit # Run tests for multisite
+              - ./phpunit tests/dev/ProAuthModeRemote # Test pro-auth
+            caches:
+              - composer
+            services:
+              - database
+
+
+definitions:
+  services:
+    database:
+      image: mysql:5.7
+      environment:
+        MYSQL_ROOT_PASSWORD: rootpass
+        MYSQL_DATABASE: wordpress_db
+        MYSQL_USER: wordpress_user
+        MYSQL_PASSWORD: password
